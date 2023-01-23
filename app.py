@@ -1,6 +1,6 @@
 import streamlit as st
-from gtts import gTTS
-from io import BytesIO
+#from gtts import gTTS
+#from io import BytesIO
 from PIL import Image
 
 
@@ -30,10 +30,10 @@ st.subheader('Body mass index (BMI) is a measure of body fat based on height and
 img = Image.open('img2.png')
 st.image(img,width=600)
 
-sound_file = BytesIO()
-tts = gTTS('Please enter your weight ,height and age details', lang='en')
-tts.write_to_fp(sound_file)
-st.audio(sound_file)
+#sound_file = BytesIO()
+#tts = gTTS('Please enter your weight ,height and age details', lang='en')
+#tts.write_to_fp(sound_file)
+#st.audio(sound_file)
 weight = st.number_input("Enter your weight in kilograms: ",value=0)
 height = st.number_input("Enter your height in centimeters: ",value=0)
 age = st.number_input("Enter your age: ",value=0)
